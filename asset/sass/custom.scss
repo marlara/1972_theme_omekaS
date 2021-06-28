@@ -1,0 +1,76 @@
+/*arrow in homepage https://codepen.io/sego/pen/bQZKwP not used*/
+
+/*logo composition https://codepen.io/merveagca/pen/omjydN*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == tab-port {
+        @media ( max-width: 56.25em ){ @content };  //900px
+    }
+}
+
+
+.composition {
+    $self: &;
+    flex: 60%;
+    background-color: #000;
+    height:100vh;
+    margin:0 auto;
+    position: relative;
+    float: right;
+    &__logo{
+        width: 45%;
+        position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 1rem;
+        @include respond(tab-port){
+            float: left;
+            position: relative;
+            width: 33.333333%;
+        }
+        &--mina{
+            left: 37%;
+            top: 1%;
+            @include respond(tab-port){
+                top: 0;
+                transform: scale(1.2);
+            }
+        }
+        &--figura{
+            left: 50%;
+            top: 13%;
+            @include respond(tab-port){
+                top: -1rem;
+                transform: scale(1.3);
+                z-index: 100;
+            }
+        }
+        &--macchina{
+            left: 33%;
+            top: 63%;
+            @include respond(tab-port){
+                left: 0;
+                top: 2em;
+                transform: scale(1.1);
+            }
+        }
+       &:hover{
+            transform: scale(1.05) translateY(-.5rem);
+            z-index:20;
+            filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+            -webkit-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+            -moz-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+            -o-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+            -ms-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+       } 
+   
+    }
+
+    //composition:hover composition__logo:not(:hover)
+    &:hover &__logo:not(:hover){
+        transform: scale(.95);
+    }
+
+}
+
+

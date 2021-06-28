@@ -1,0 +1,517 @@
+/*smooth scrolling on entire site*/
+html{
+    scroll-behavior: smooth;
+}
+
+.page-title{
+  font-size: 27px;
+  line-height: 48px;
+  margin: 24px 0;
+  font-family: "Archivo Black",sans-serif;
+  font-weight: normal;
+}
+
+
+/* Rectangle on title */
+
+.rectangle_title{
+  display: block;
+  background: 
+  linear-gradient(to top left,transparent, #DFC7A9 0) top left/40% 40% no-repeat,
+  transparent;
+}
+
+/*sticky footer, fourth of https://css-tricks.com/couple-takes-sticky-footer/*/
+/*html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+#content, #content_home{
+    flex: 1 0 auto;
+}
+footer{
+    flex-shrink: 0;
+    display: flex;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+}
+*/
+
+footer{
+  background-color: black;
+    color: white;
+}
+
+/* HOME */
+#content_home{
+    padding: 0px 0px 0;
+}
+
+/*first section*/
+.home_image_section{
+    background-position: center center;
+    background-image: url(/themes/thedaily/asset/img/home_sottsass.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    background-color: #000;
+    box-sizing: border-box;
+}
+
+.overlay { /*overlay for background image home*/
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+  }
+
+#exhibit_intro{
+    padding-bottom: 0px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.intro_text{
+  flex: 80%;
+}
+
+.intro_text p{
+  color: #fff;
+}
+
+#exhibit_intro .arrow-down img{
+  filter: invert(1); /*invert color of arrow*/
+}
+
+/*second section*/
+
+#intro{
+  display: block;
+  background-color: #DFC7A9;
+  /*background: 
+  linear-gradient(to bottom left,transparent 50%, grey 0.5em, #DFC7A9 51%) bottom left/100% 40% no-repeat,
+  transparent; */
+}
+
+#intro .home_text{
+  position: relative;
+  overflow-y: scroll;
+  height: 90%;
+  background-color: white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;;
+}
+
+.arrow-down{
+  display: block;
+  position: relative;
+  padding: 10px;
+}
+
+.arrow-down img{
+  position:relative;
+  height: 30px;
+  display: block;
+  margin-left: auto; /*center the image*/
+  margin-right: auto; /*center the image*/
+}
+
+/*third section*/
+
+.wrap{
+  display: flex;
+  width: 100%;
+}
+
+.home_section{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.home_text{
+    flex: 40%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+}
+
+.home_section--logo{
+    background-color: #000;
+}
+
+.wrap > .home_text{
+    max-width: 40%;
+    height: 100vh;
+    color: #fff;
+    padding-top: 10%;
+}
+
+.composition_blocks{
+  display: none;
+  height: auto;
+  position: relative;
+  text-align:center;
+}
+
+.block_link{
+  background-color: #DFC7A9;
+  height: 20px;
+  padding-left: 0px;
+  border: black, solid, 1px;
+}
+
+.versace_firma{
+  height: 30%;
+  float: right;
+  margin-top: 10%;
+  margin-right: 5%;
+}
+
+
+/* TO DO FOOTER: RESPONSIVE HOME */
+
+@media only screen and (max-width: 700px) {
+
+    #exhibit_intro{
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 2px;
+    }
+    .intro_text p{
+        font-size: 1em;
+    }
+}
+ 
+@media only screen and (max-width: 600px) { /*it doesn't work!*/
+    .intro_text{
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (max-width: 1000px) { /*change the logo into blocks*/
+  .composition{
+    display: none;
+  }
+
+  .wrap > .home_text{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+  }
+
+  .composition_blocks{
+    display: block;
+  }
+} 
+
+
+/* DESIGN PAGE*/
+
+.design_text{
+  flex: 50%;
+  float: left;
+  padding-top: 10%;
+}
+
+.cogapp{
+  margin-left: 5%;
+  float: left;
+  flex: 50%;
+}
+
+.see_more{
+  border-top: 3px solid black;
+}
+
+/* OTHERS */
+
+/*if Universal Viewer module is active, this prevents a bad viewer*/
+#itemfiles, .lSSlideOuter .media-render{
+  height: auto;
+  max-height: none;
+}
+
+/*little footnote*/
+.littlefoot-footnote__button {
+    font-size: .5em;
+    min-height: 24px;
+    background-color: #DFC7A9;
+    border-radius: 0px
+}
+.littlefoot-footnote__host > button > svg > circle {
+    fill:black;
+}
+.littlefoot-footnote__button__ellipsis {
+     padding: .35em .3em;
+}
+.littlefoot-footnote__wrapper {
+    max-width: 270px;
+}
+
+/* DESIGNER PAGE responsive image grid from https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+.row-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-grid {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+/*.column-grid img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}*/
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column-grid {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-grid {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*on hover see https://www.youtube.com/watch?v=exb2ab72Xhs*/
+
+.designer_image{
+  position: relative;
+  width: 100%;
+  border: 3px solid black;
+  margin-bottom: 4px;
+}
+
+.designer_image:hover{
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.designer_image > a{
+  display: flex;
+}
+
+.designer__img{
+  flex: 1;
+  width: 60%;
+
+}
+
+.designer__text{
+  background-color: rgba(223, 199, 169);
+  width: 20%;
+  margin: 8px;
+}
+
+.designer__title{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+/*
+.designer__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(223, 199, 169, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.designer__overlay > *{
+  transform: translateY(20px);
+  transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.designer__overlay:hover{
+  opacity: 1;
+}
+
+.designer__overlay:hover > *{
+  transform: translateY(0);
+}*/
+
+.designer__title{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+/* PAGINE MONOGRAFIE see https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6*/ 
+
+.head-mono{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: #DFC7A9;
+  padding: 20px;
+}
+
+.scrolling-wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.scrolling-wrapper .section_mono{
+  flex: 0 0 100%;
+}
+
+.section_mono > p, .section_mono > h2{ /* margin of the text inside each section*/
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* left and right arrow pagine monografie */
+
+span.arrow-left,span.arrow-right{
+  display: block;
+  position: fixed;
+  padding-top: 20%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+span.arrow-left img,span.arrow-right img{
+  height: 30px;
+}
+
+span.arrow-left{
+  left: 0px;
+  float: left;
+}
+span.arrow-right{
+  right: 0px;
+  float: right;
+}
+/*
+span.arrow-left:hover, span.arrow-right:hover{
+  background-color: #333;
+}*/
+
+span.mono_link{
+  padding-left: 40px;
+  position: relative;
+}
+
+/* slider */
+
+.imageslide{
+  display: none;
+  border: 3px solid black;
+  padding: 10px;
+  position: relative;
+  }
+
+.slider-block{
+  justify-content: center;
+  display: flex;
+
+}
+
+.slider-title{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.6em;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  background-color: black;
+  color: white;
+}
+
+.pagination-slider{
+  margin-top: 1em;
+}
+
+.select-image{
+  background-color: #DFC7A9;
+  padding: 0.6em;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.select-image::after{    
+  content: "";
+  position: relative;
+  height: 3px;
+  left: 0;
+  top: 0.6em; /*same as padding*/
+  display: block;
+  width: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.select-image:hover::after{ 
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+.select-image.selected{
+  border: 3px solid black;
+}
+
+.select-image.selected:hover::after{ 
+  visibility: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {	
+
+}
