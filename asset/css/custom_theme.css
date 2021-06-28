@@ -109,7 +109,7 @@ footer{
 .arrow-down{
   display: block;
   position: relative;
-  padding: 10px;
+  padding: 1em;
 }
 
 .arrow-down img{
@@ -252,6 +252,33 @@ footer{
 }
 .littlefoot-footnote__wrapper {
     max-width: 270px;
+}
+
+.littlefoot-footnote__button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.littlefoot-footnote__button:hover::after, .littlefoot-footnote__button:focus::after {
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+.littlefoot-footnote__button:hover, .littlefoot-footnote__button:focus{
+  background-color: #DFC7A9;
 }
 
 /* DESIGNER PAGE responsive image grid from https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
@@ -433,6 +460,34 @@ span.mono_link{
   position: relative;
 }
 
+.mono_link > a{
+  margin: 0.3em;
+  position: relative;
+}
+
+.mono_link > a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.mono_link > a:hover::after, .mono_link > a:focus::after{
+  transform: scaleX(1);
+  visibility: visible;
+}
+
 /* slider */
 
 .imageslide{
@@ -490,7 +545,7 @@ span.mono_link{
   -o-transition: all 0.3s ease-in-out;
 }
 
-.select-image:hover::after{ 
+.select-image:hover::after, .select-image:focus::after{ 
   transform: scaleX(1);
   visibility: visible;
 }
@@ -499,7 +554,7 @@ span.mono_link{
   border: 3px solid black;
 }
 
-.select-image.selected:hover::after{ 
+.select-image.selected:hover::after, .select-image.selected:focus::after{ 
   visibility: hidden;
 }
 
@@ -514,4 +569,35 @@ span.mono_link{
 
 @media (max-width: 480px) {	
 
+}
+
+
+/* underline text link */
+
+p a{
+  position: relative;
+  display: inline-block;
+}
+
+p a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+p a:hover::after, p a:focus::after{
+  transform: scaleX(1);
+  visibility: visible;
 }
