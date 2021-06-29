@@ -21,8 +21,27 @@ html{
   transparent;
 }
 
+/*custom  hover */
+
+button:hover, button:focus{
+  background-color: #C9C8C5;
+}
+
+.search-toggle:hover, .search-toggle:focus{
+  color: #C9C8C5;
+  background-color: #000;
+}
+
+.menu-toggle:hover, .menu-toggle:focus{
+  color: #C9C8C5;
+}
+
+#top-nav > ul > li > a:hover{
+  color: #C9C8C5;
+}
+
 /*sticky footer, fourth of https://css-tricks.com/couple-takes-sticky-footer/*/
-/*html, body{
+html, body{
     height: 100%;
 }
 body{
@@ -39,12 +58,11 @@ footer{
     color: white;
     padding-top: 5px;
 }
-*/
 
-footer{
+/*footer{
   background-color: black;
     color: white;
-}
+}*/
 
 /* HOME */
 #content_home{
@@ -92,9 +110,6 @@ footer{
 #intro{
   display: block;
   background-color: #DFC7A9;
-  /*background: 
-  linear-gradient(to bottom left,transparent 50%, grey 0.5em, #DFC7A9 51%) bottom left/100% 40% no-repeat,
-  transparent; */
 }
 
 #intro .home_text{
@@ -237,7 +252,7 @@ footer{
   max-height: none;
 }
 
-/*little footnote*/
+/*little footnote to copy on the csss text editor*/
 .littlefoot-footnote__button {
     font-size: .5em;
     min-height: 24px;
@@ -258,7 +273,7 @@ footer{
   content: "";
   display: block;
   position: absolute;
-  height: 0.1em;
+  height: 0.2em;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -326,14 +341,14 @@ footer{
   margin-bottom: 4px;
 }
 
-.designer_image:hover{
-  opacity: 0.5;
+
+/*  opacity: 0.5;
   transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-}
+}*/
 
 .designer_image > a{
   display: flex;
@@ -357,48 +372,32 @@ footer{
   text-align: center;
   margin-left: 10px;
   margin-top: 5px;
-}
-
-/*
-.designer__overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(223, 199, 169, 0.6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-}
-
-.designer__overlay > *{
-  transform: translateY(20px);
-  transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-}
-
-.designer__overlay:hover{
-  opacity: 1;
-}
-
-.designer__overlay:hover > *{
-  transform: translateY(0);
-}*/
-
-.designer__title{
   font-size: 2em;
   font-weight: bold;
+  display: block;
+}
+
+.designer__title::after{ /*changed a little for vertical text*/
+  content: "";
+  position: relative;
+  height: 100%;
+  right: 10px;
+  bottom: 0;
+  display: block;
+  width: 3px;
+  background-color: #000;
+  transform: scaleY(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.designer_image:hover .designer__title::after{
+  transform: scaleY(1);
+  visibility: visible;
 }
 
 
@@ -443,17 +442,13 @@ span.arrow-left img,span.arrow-right img{
 }
 
 span.arrow-left{
-  left: 0px;
+  left: 0.2em;
   float: left;
 }
 span.arrow-right{
-  right: 0px;
+  right: 0.2em;
   float: right;
 }
-/*
-span.arrow-left:hover, span.arrow-right:hover{
-  background-color: #333;
-}*/
 
 span.mono_link{
   padding-left: 40px;
@@ -557,20 +552,6 @@ span.mono_link{
 .select-image.selected:hover::after, .select-image.selected:focus::after{ 
   visibility: hidden;
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-
-}
-
-@media (max-width: 480px) {	
-
-}
-
 
 /* underline text link */
 
