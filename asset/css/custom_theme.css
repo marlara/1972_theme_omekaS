@@ -103,6 +103,10 @@ footer{
 
 #exhibit_intro .arrow-down img{
   filter: invert(1); /*invert color of arrow*/
+  -webkit-filter: invert(1);
+  -moz-filter: invert(1);
+  -o-filter: invert(1);
+  -ms-filter: invert(1);
 }
 
 /*second section*/
@@ -187,6 +191,11 @@ footer{
   margin-right: 5%;
 }
 
+.composition__logo--mina:hover ~ .highlight-mina{ /* if part of logo is in hover, highlight the correspnding text TO DO*/ 
+  background-color: #DFC7A9;
+  color: #000;
+}
+
 
 /* TO DO FOOTER: RESPONSIVE HOME */
 
@@ -203,8 +212,8 @@ footer{
 }
  
 @media only screen and (max-width: 600px) { /*it doesn't work!*/
-    .intro_text{
-        overflow-y: scroll;
+    .intro_text p{ 
+      overflow-y: scroll;
     }
 }
 
@@ -332,23 +341,12 @@ footer{
   }
 }
 
-/*on hover see https://www.youtube.com/watch?v=exb2ab72Xhs*/
-
 .designer_image{
   position: relative;
   width: 100%;
   border: 3px solid black;
   margin-bottom: 4px;
 }
-
-
-/*  opacity: 0.5;
-  transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-}*/
 
 .designer_image > a{
   display: flex;
@@ -414,7 +412,7 @@ footer{
 .scrolling-wrapper{
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
@@ -423,8 +421,7 @@ footer{
 }
 
 .section_mono > p, .section_mono > h2{ /* margin of the text inside each section*/
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 1.5em;
 }
 
 /* left and right arrow pagine monografie */
@@ -439,6 +436,14 @@ span.arrow-left,span.arrow-right{
 
 span.arrow-left img,span.arrow-right img{
   height: 30px;
+}
+
+span.arrow-left:hover,span.arrow-right:hover img{
+  filter: invert(95%) sepia(5%) saturate(111%) hue-rotate(7deg) brightness(86%) contrast(89%);
+  -webkit-filter: invert(95%) sepia(5%) saturate(111%) hue-rotate(7deg) brightness(86%) contrast(89%);
+  -moz-filter: invert(95%) sepia(5%) saturate(111%) hue-rotate(7deg) brightness(86%) contrast(89%);
+  -o-filter: invert(95%) sepia(5%) saturate(111%) hue-rotate(7deg) brightness(86%) contrast(89%);
+  -ms-filter: invert(95%) sepia(5%) saturate(111%) hue-rotate(7deg) brightness(86%) contrast(89%);
 }
 
 span.arrow-left{
@@ -581,4 +586,51 @@ p a::after {
 p a:hover::after, p a:focus::after{
   transform: scaleX(1);
   visibility: visible;
+}
+
+
+/*text right and image*/
+
+.mono_text_left{
+  display: flex;
+}
+
+.mono_text{
+  padding: 2em;
+}
+
+.mono_text_left img{
+  object-fit: none;
+  margin-right: 2em;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .mono_text_left{
+    display: inline-block;
+  }
+
+  .mono_text_left img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/*blockquote monografie*/
+
+blockquote p{
+  margin: 0.5em;
+  padding: 0.5em 10px;
+  quotes: "“" "”";
+  font-size: 1.3em;
+  line-height: 1.3;
+}
+
+blockquote p::before {
+  content: open-quote;
+}
+blockquote p::after {
+  content: close-quote;
 }
