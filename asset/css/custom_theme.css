@@ -292,8 +292,19 @@ footer{
 
 .see_more{
   border-top: 3px solid black;
+
 }
 
+@media screen and (max-width: 1000px) {
+  .wrap.design_page{
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  
+  .cogapp{
+    margin: 5%;
+  }
+}
 /* OTHERS */
 
 /*if Universal Viewer module is active, this prevents a bad viewer*/
@@ -645,6 +656,12 @@ span.mono_link{
   padding: 2em;
 }
 
+.mono_text_left iframe{
+  border: 3px solid black;
+  padding: 10px;
+  float: left;
+}
+
 .mono_text_left img{
   object-fit: none;
   margin-right: 2em;
@@ -670,9 +687,12 @@ blockquote p{
   margin: 0.5em;
   padding: 0.5em 10px;
   quotes: "“" "”";
-  font-size: 1.3em;
   line-height: 1.3;
+  border: solid 3px #C9C8C5;
+  box-shadow: 0.2em 0.2em 0 0 #C9C8C5;
+  max-width: max-content;
 }
+
 
 blockquote p::before {
   content: open-quote;
