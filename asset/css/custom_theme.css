@@ -23,7 +23,7 @@ html{
 
 /*custom  hover */
 
-button:hover, button:focus{
+button:hover, button:focus, button:focus-visible{
   background-color: #C9C8C5;
 }
 
@@ -32,12 +32,50 @@ button:hover, button:focus{
   background-color: #000;
 }
 
+.search-toggle:focus-visible{
+  outline: 1px dotted;
+}
+
 .menu-toggle:hover, .menu-toggle:focus{
   color: #C9C8C5;
 }
 
+.menu-toggle:focus-visible{
+  outline: 1px dotted;
+}
+
 #top-nav > ul > li > a:hover{
   color: #C9C8C5;
+}
+
+/* underline text link */
+
+p a{
+  position: relative;
+  display: inline-block;
+}
+
+p a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+p a:hover::after, p a:focus::after{
+  transform: scaleX(1);
+  visibility: visible;
 }
 
 /*sticky footer, fourth of https://css-tricks.com/couple-takes-sticky-footer/*/
@@ -59,10 +97,6 @@ footer{
     padding-top: 5px;
 }
 
-/*footer{
-  background-color: black;
-    color: white;
-}*/
 
 /* HOME */
 #content_home{
@@ -197,8 +231,6 @@ footer{
 }
 
 
-/* TO DO FOOTER: RESPONSIVE HOME */
-
 @media only screen and (max-width: 700px) {
 
     #exhibit_intro{
@@ -234,6 +266,11 @@ footer{
   }
 } 
 
+@media screen and (min-width: 500px) {
+  footer {
+     position: relative;
+  }
+}
 
 /* DESIGN PAGE*/
 
@@ -247,6 +284,10 @@ footer{
   margin-left: 5%;
   float: left;
   flex: 50%;
+}
+
+.cogapp:focus, .cogapp:focus-visible{
+  outline: 1px dotted;
 }
 
 .see_more{
@@ -318,12 +359,6 @@ footer{
   max-width: 33%;
   padding: 0 4px;
 }
-
-/*.column-grid img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}*/
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -414,9 +449,10 @@ footer{
   flex-wrap: nowrap;
   overflow-x: hidden;
   overflow-y: hidden;
+  margin: 0 auto;
 }
 
-.scrolling-wrapper .section_mono{
+.section_mono{
   flex: 0 0 100%;
 }
 
@@ -488,7 +524,7 @@ span.mono_link{
   visibility: visible;
 }
 
-/* slider */
+/* slider monografie*/
 
 .imageslide{
   display: none;
@@ -558,38 +594,48 @@ span.mono_link{
   visibility: hidden;
 }
 
-/* underline text link */
 
-p a{
-  position: relative;
-  display: inline-block;
+@media screen and (max-width: 800px) {
+  .slider-block{
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  
+  .pagination-slider{
+    margin-top: 0;
+    order: 1;
+  }
+
+  .imageslide{ /*put the slider after pagination*/
+    order: 2;
+  }
+  
+  .select-image{
+    position: relative;
+    padding: 0.3em;
+    width: max-content;
+    float: left;
+  }
+
+  .select-image::after{
+    top: 0.3em; /*same as padding*/
+  }
+
+  .imageslide img{
+    object-fit: cover;
+  }
+
+  .item-slider iframe{
+    display: block;
+    width: 80vw;
+  }
+
 }
 
-p a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 0.1em;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #000;
-  transform: scaleX(0);
-  visibility: hidden;
-  transition: all 0.3 ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-}
-
-p a:hover::after, p a:focus::after{
-  transform: scaleX(1);
-  visibility: visible;
-}
-
-
-/*text right and image*/
+/*text right and image left monografie*/
 
 .mono_text_left{
   display: flex;

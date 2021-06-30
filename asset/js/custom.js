@@ -1,4 +1,5 @@
-$(document).ready(function() {
+//horizontal scrolling monografie
+var scrollSection = $(document).ready(function() {
 
   //cache our items and containers
   var items = $(".section_mono");
@@ -64,14 +65,17 @@ $(document).ready(function() {
   $(".arrow-left").click({direction: "prev"}, moveToItem);
   $(".arrow-right").click({direction: "next"}, moveToItem);
 
-
 });
+
+
+
+
 
 //populate the mono_link div with the sub-titles of section
 $(document).ready(function() {
     var titles = $('.scheda_link');
     titles.each(function(){
-        $('.mono_link').append("<a href='#"+$(this).attr('id')+"'> "+$(this).text()+"</a>")
+        $('.mono_link').append("<a href='#"+$(this).attr('id')+"' aria-label='go to sub-section'>"+$(this).text()+"</a>")
     });
 });
 
@@ -79,6 +83,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 
+    
     $('.slider').each(function(){
         $slider = $(this);
         var $slider_block = $slider.find($('.slider-block'));
@@ -86,7 +91,7 @@ $(document).ready(function(){
 
         var titles_pagination = $slider.find($('.slider-title'));
         titles_pagination.each(function(){
-            $slider.find($('.pagination-slider')).append('<div class="select-image" alt="go to image">'+$(this).text()+"</div>") //gets the titles and relative urls to the slider items
+            $slider.find($('.pagination-slider')).append('<div class="select-image" alt="go to image" role="tab" tabindex="0"><span>'+$(this).text()+"</span></div>") //gets the titles and relative urls to the slider items
         });
 
         $slider.find($('.imageslide')).first().addClass('current').show();
@@ -96,7 +101,7 @@ $(document).ready(function(){
             $(el).attr('id','image-num-'+i);
         });
 
-        var $slides = $slider.find($('.imageslide')); 
+    var $slides = $slider.find($('.imageslide')); 
 
         $slider.find($('.select-image')).click(function() {
             var index = $(this).index(); //the index of the selector
@@ -112,3 +117,4 @@ $(document).ready(function(){
         });
     });
 });
+
