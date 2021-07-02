@@ -68,9 +68,6 @@ var scrollSection = $(document).ready(function() {
 });
 
 
-
-
-
 //populate the mono_link div with the sub-titles of section
 $(document).ready(function() {
     var titles = $('.scheda_link');
@@ -83,7 +80,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 
-    
+    //create elements
     $('.slider').each(function(){
         $slider = $(this);
         var $slider_block = $slider.find($('.slider-block'));
@@ -94,25 +91,34 @@ $(document).ready(function(){
             $slider.find($('.pagination-slider')).append('<div class="select-image" alt="go to image" role="tab" tabindex="0"><span>'+$(this).text()+"</span></div>") //gets the titles and relative urls to the slider items
         });
 
-        $slider.find($('.imageslide')).first().addClass('current').show();
-        $slider.find($('.select-image')).first().addClass('selected');
+        
         
         $slider.find($('.imageslide')).each(function( i, el ){ //add a numbered id for each figure
             $(el).attr('id','image-num-'+i);
         });
+    });
 
-    var $slides = $slider.find($('.imageslide')); 
+    //select and change figure
+    
+    $('.slider').each(function(){
+        $slider = $(this);
 
-        $slider.find($('.select-image')).click(function() {
+        var $slides = $slider.find($('.imageslide')); 
+        var $selectors = $slider.find($('.select-image'));
+
+        $slides.first().addClass('current').show();
+        $selectors.first().addClass('selected');
+
+        $selectors.click(function() {
             var index = $(this).index(); //the index of the selector
             var $nextSlide = $slides.eq(index);
             // don't do anything if same indexed slide already has current class
             if (!$nextSlide.hasClass('current')) {
                 $slides.filter('.current').removeClass('current').fadeOut(function() {
-                $('.select-image').filter('.selected').removeClass('selected')
-                $nextSlide.addClass('current').fadeIn()
-                $('.select-image').eq(index).addClass('selected');
-            });
+                    $selectors.filter('.selected').removeClass('selected')
+                    $nextSlide.addClass('current').fadeIn()
+                    $selectors.eq(index).addClass('selected');
+                });
             }
         });
     });
