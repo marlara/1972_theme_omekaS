@@ -70,11 +70,24 @@ var scrollSection = $(document).ready(function() {
 
 //populate the mono_link div with the sub-titles of section
 $(document).ready(function() {
+    var scrollContainer = $(".scrolling-wrapper");
+   
     var titles = $('.scheda_link');
     titles.each(function(){
-        $('.mono_link').append("<a href='#"+$(this).attr('id')+"' aria-label='go to sub-section'>"+$(this).text()+"</a>")
+        $('.mono_link').append("<a class='rel_link' href='#"+$(this).attr('id')+"' aria-label='go to sub-section'>"+$(this).text()+"</a>") //href='#"+$(this).attr('id')+"'
+    });
+
+    //center the div
+    $('.rel_link').each(function(){
+        $(this).click(function(){
+            var id = $(this).attr('href');
+            
+            scrollContainer.animate({"scrollLeft": $(id).position().left + scrollContainer.scrollLeft()}, 400);
+        });
     });
 });
+
+
 
 //slider
 
@@ -90,8 +103,6 @@ $(document).ready(function(){
         titles_pagination.each(function(){
             $slider.find($('.pagination-slider')).append('<div class="select-image" alt="go to image" role="tab" tabindex="0"><span>'+$(this).text()+"</span></div>") //gets the titles and relative urls to the slider items
         });
-
-        
         
         $slider.find($('.imageslide')).each(function( i, el ){ //add a numbered id for each figure
             $(el).attr('id','image-num-'+i);
