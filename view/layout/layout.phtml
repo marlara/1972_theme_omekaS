@@ -8,12 +8,10 @@ $this->headTitle($siteTitle)->setSeparator(' · ');
 $this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/custom_theme.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
-$this->headLink()->prependStylesheet($this->assetUrl('splide-2.4.21/dist/css/splide-default.min.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Archivo+Black|Assistant:200,300,400');
 $this->headScript()->prependFile($this->assetUrl('js/custom.js'));
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
-$this->headScript()->prependFile($this->assetUrl('splide-2.4.21/dist/js/splide.min.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $userBar = $this->userBar();
@@ -87,7 +85,7 @@ $this->trigger('view.layout');
             </nav>
         </header>
         <?php $path = $_SERVER["REQUEST_URI"];
-        if ($path == "/s/prova_mostra/page/home"): #the homepage has another layout but I don't like this solution ?>
+        if ($path == "/s/1972_mostra/page/mostra"): #the homepage has another layout but I don't like this solution ?>
             <div id="content_home" role="main">
                 <section class="home_image_section">
                     <div class="overlay">
@@ -133,7 +131,7 @@ $this->trigger('view.layout');
                     </div>
                 </section>
             </div>
-        <?php elseif ($path == "/s/prova_mostra/page/design"): #the design page has another layout but I don't like this solution ?> 
+        <?php elseif ($path == "/s/1972_mostra/page/design"): #the design page has another layout but I don't like this solution ?> 
             <div id="content" role="main">
             <div class="rectangle_title"><h2>Design — MoMA 1972</h2></div>
                 <section class="wrap design_page">
@@ -153,7 +151,7 @@ $this->trigger('view.layout');
                 </div>
                 </section>
             </div>
-        <?php elseif ($path == "/s/prova_mostra/page/designer"): #the designer page has another layout but I don't like this solution ?> 
+        <?php elseif ($path == "/s/1972_mostra/page/designer"): #the designer page has another layout but I don't like this solution ?> 
             <div id="content" role="main"> 
             <div class="rectangle_title"><h2>Designer</h2></div>
             <div class="row-grid">
@@ -261,7 +259,7 @@ $this->trigger('view.layout');
                 </div>
             </div>
             <?php echo $this->content; ?>
-        <?php elseif (preg_match("/\/s\/prova_mostra\/page\/designer_.*/", $path)): #the designer page has another layout but I don't like this solution ?> 
+        <?php elseif (preg_match("/\/s\/1972_mostra\/page\/designer_.*/", $path)): #the designer page has another layout but I don't like this solution ?> 
             <div id="content_home" role="main">
                 <div class="head-mono">                    
                     <span class="mono_link"></span>
