@@ -1,5 +1,5 @@
 {
-    "name": "omeka-s-themes/thedaily",
+    "name": "omeka-s-themes/1972_thedaily",
     "type": "omeka-s-theme",
     "require": {
         "omeka/omeka-s": "*"
