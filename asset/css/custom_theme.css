@@ -12,13 +12,29 @@ html{
 }
 
 
-/* Rectangle on title */
+/* Rectangle on title and image*/
 
 .rectangle_title{
   display: block;
   background: 
   linear-gradient(to top left,transparent, #DFC7A9 0) top left/40% 40% no-repeat,
   transparent;
+  margin-left: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .rectangle_title{
+    background: 
+    linear-gradient(to top left,transparent, #DFC7A9 0) top left/500px 40% no-repeat,
+    transparent;
+  }
+}
+
+.title_image{
+  width: 120px;
+  float: left;
+  padding: 0px 10px;
+  margin-right: 0px;
 }
 
 /*custom  hover */
@@ -109,7 +125,7 @@ footer{
 /*first section*/
 .home_image_section{
     background-position: center center;
-    background-image: url(/themes/1972_thedaily/asset/img/home_sottsass.jpeg);
+    background-image: url(/themes/1972_thedaily/asset/img/home_sottsass.jpeg); /*omeka-s*/
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
