@@ -109,7 +109,8 @@ $this->trigger('view.layout');
                     <div class="wrap">
                         <div class="home_text">
                             <p>La mostra &egrave; quindi suddivisa in camere monografiche e in tre sezioni che prendono spunto dal titolo dell&rsquo;esposizione.<ul><li><span class="highlight-figura">Sezione Moda italiana</span>: Nodo centrale di questa sezione &egrave; il progetto di Walter Albini e di tutti gli stilisti che hanno partecipato a creare l&rsquo;etichetta del Made in Italy.</li><li><span class="highlight-mina">Sezione Design al MoMA</span>: In questa sezione l&rsquo;approfondimento sar&agrave; sulla mostra Italy: The&nbsp;New Domestic Landscape&nbsp;e sul materiale progettuale legato ad alcuni lavori in mostra.</li><li><span class="highlight-macchina">Sezione Storia</span>: attraverso una timeline viene restituita la storia dello CSAC, con mostre e pubblicazioni, intrecciata alle opere in mostra.</li></ul></p>
-                            <div class="composition_blocks">
+                        </div>
+                        <div class="composition_blocks">
                                 <form action="" target="_blank">
                                     <button type="submit" style="display:inline-block; width: 100%; margin: 0px" value="Sezione Moda italiana">Sezione Moda italiana</button>
                                 </form>
@@ -119,7 +120,6 @@ $this->trigger('view.layout');
                                 <form action="" target="_blank">
                                     <button type="submit" style="fdisplay:inline-block; width: 100%; margin: 0px" value="Sezione Storia">Sezione Storia</button>
                                 </form>
-                            </div>
                         </div>
                         <div class="composition">
                             <a href="design"><img src="/themes/1972_thedaily/asset/img/logo_minaBN2.png" class="composition__logo composition__logo--mina"></a>
@@ -127,29 +127,28 @@ $this->trigger('view.layout');
                             <a href="storia"><img src="/themes/1972_thedaily/asset/img/logo_macchinaBN2.png" class="composition__logo composition__logo--macchina"></a>
                             <img src="/themes/1972_thedaily/asset/img/versace_firma.jpeg" class="versace_firma">
                         </div>
-                        
                     </div>
                 </section>
             </div>
         <?php elseif ($path == "/s/1972_mostra/page/design"): #omeka-s #the design page has another layout but I don't like this solution ?> 
             <div id="content" role="main">
-            <img src="/themes/1972_thedaily/asset/img/logo_minaLITTLE.png" class="title_image"/><div class="rectangle_title"><h2>Design — MoMA 1972</h2></div>
-                <section class="wrap design_page">
-                    <div class="design_text">
-                        <p>Questa sezione ripercorre la mostra del 1972 al MoMA, che ha segnato uno snodo importante per la conoscenza del design italiano, così come per la storia del design internazionale.</p>
-                        <form action="https://storiiies.cogapp.com/viewer/662du/MoMA-1972" target="_blank">
-                            <button type="submit" style="float:right; margin-right: 10%; margin:5%" value="Vai al percorso">Ingrandisci</button>
-                        </form>
-                    </div>
-                    <div class="cogapp">
-                        <iframe width= "100%" height="600" src="https://storiiies.cogapp.com/viewer/662du/MoMA-1972?embed=true" title="MoMA 1972"></iframe>
-                    </div>
-                </section>
-                <section>
-                <div class="see_more">
-                    <?php echo $this->content; ?>    
-                </div>
-                </section>
+                <img src="/themes/1972_thedaily/asset/img/logo_minaLITTLE.png" class="title_image"/><div class="rectangle_title"><h2>Design — MoMA 1972</h2></div>
+                    <section class="wrap design_page">
+                        <div class="design_text">
+                            <p>Questa sezione ripercorre la mostra del 1972 al MoMA, che ha segnato uno snodo importante per la conoscenza del design italiano, così come per la storia del design internazionale.</p>
+                            <form action="https://storiiies.cogapp.com/viewer/662du/MoMA-1972" target="_blank">
+                                <button type="submit" style="float:right; margin-right: 10%; margin:5%" value="Vai al percorso">Ingrandisci</button>
+                            </form>
+                        </div>
+                        <div class="cogapp">
+                            <iframe width= "100%" height="600" src="https://storiiies.cogapp.com/viewer/662du/MoMA-1972?embed=true" title="MoMA 1972"></iframe>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="see_more">
+                            <?php echo $this->content; ?>    
+                        </div>
+                    </section>
             </div>
         <?php elseif ($path == "/s/1972_mostra/page/moda"): #omeka-s #the moda page has another layout but I don't like this solution ?> 
             <div id="content" role="main">

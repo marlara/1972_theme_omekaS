@@ -12,6 +12,13 @@ html{
 }
 
 
+/*grey background for blocks*/
+
+.grey{
+  background-color: #C9C8C5;
+
+}
+
 /* Rectangle on title and image*/
 
 .rectangle_title{
@@ -147,7 +154,8 @@ footer{
 }
 
 .intro_text{
-  flex: 80%;
+  height: 500px;
+  overflow-y: scroll;
 }
 
 .intro_text p{
@@ -213,6 +221,8 @@ footer{
 .wrap{
   display: flex;
   width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .home_section{
@@ -276,11 +286,9 @@ footer{
     .intro_text p{
         font-size: 1em;
     }
-}
- 
-@media only screen and (max-width: 600px) { /*it doesn't work!*/
-    .intro_text p{ 
-      overflow-y: scroll;
+
+    #exhibit_intro .arrow-down{
+      display: none;
     }
 }
 
@@ -294,20 +302,29 @@ footer{
     margin-right: auto;
     margin-left: auto;
     position: absolute;
+    height: 450px;
+    overflow-y: scroll;
   }
 
   .composition_blocks{
     display: block;
+    width: 100%;
+    margin-top: 450px;
   }
 } 
 
-@media screen and (min-width: 500px) {
+/*@media screen and (min-width: 500px) {
   footer {
      position: relative;
   }
-}
+}*/
 
 /* DESIGN PAGE*/
+
+.wrap.design_page{ /*or else the wrap is broken*/
+  height: auto;
+  overflow-y: hidden;
+}
 
 .design_text{
   flex: 50%;
@@ -683,21 +700,22 @@ span.mono_link{
 
 /*text right and image left monografie*/
 
-.mono_text_left{
+.mono_text_left, .mono_text_right{
   display: flex;
+  padding: 2px;
 }
 
 .mono_text{
   padding: 2em;
 }
 
-.mono_text_left iframe{
+.mono_text_left iframe, .mono_text_right iframe{
   border: 3px solid black;
   padding: 10px;
-  float: left;
 }
 
-.mono_text_left img{
+
+.mono_text_left img, .mono_text_right img{
   object-fit: none;
   margin-right: 2em;
   border: 3px solid black;
@@ -705,15 +723,21 @@ span.mono_link{
 }
 
 @media screen and (max-width: 800px) {
-  .mono_text_left{
+  .mono_text_left, .mono_text_right{
     display: inline-block;
   }
 
-  .mono_text_left img{
+  .mono_text_left img, .mono_text_right img{
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    display: inline-block;
   }
+
+  .mono_text_left iframe, .mono_text_right iframe{
+    width: 80vw;
+    display: inline-block;
+  }
+ 
 }
 
 /*blockquote monografie*/
