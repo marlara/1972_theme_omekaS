@@ -11,6 +11,44 @@ html{
   font-weight: normal;
 }
 
+/*menu*/
+
+#open-menu > ul { /*makes the list horizontal*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#open-menu > ul > li {
+  float: left;
+}
+
+#open-menu > ul > li > a{
+  display: block;
+  color: #DFC7A9;
+  font-family: "Archivo Black",sans-serif;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#open-menu > ul > li > a:hover {
+  color: #C9C8C5;
+}
+
+/*add logic for menu visibility*/
+
+@media only screen and (max-width: 1000px){
+  #open-menu{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  #top-nav{
+    display: none;
+  }
+}
 
 /*grey background for blocks*/
 
@@ -132,7 +170,7 @@ footer{
 /*first section*/
 .home_image_section{
     background-position: center center;
-    background-image: url(/themes/1972_thedaily/asset/img/home_sottsass.jpeg); /*omeka-s*/
+    background-image: url(/omeka-s/themes/1972_thedaily/asset/img/home_sottsass.jpeg); /*omeka-s*/
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -155,7 +193,7 @@ footer{
 
 .intro_text{
   height: 500px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .intro_text p{
@@ -270,9 +308,16 @@ footer{
   margin-right: 5%;
 }
 
-.composition__logo--mina:hover ~ .highlight-mina{ /* if part of logo is in hover, highlight the correspnding text TO DO*/ 
+.highlight-section{ /* highlight*/ 
   background-color: #DFC7A9;
   color: #000;
+  padding: 2px;
+  margin: 3px;
+  font-family: "Archivo Black",sans-serif;
+}
+
+.highlight-section:hover{
+  background-color: #C9C8C5;
 }
 
 
@@ -303,13 +348,7 @@ footer{
     margin-left: auto;
     position: absolute;
     height: 450px;
-    overflow-y: scroll;
-  }
-
-  .composition_blocks{
-    display: block;
-    width: 100%;
-    margin-top: 450px;
+    overflow-y: auto;
   }
 } 
 
