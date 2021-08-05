@@ -29,8 +29,8 @@
             top: 63%;
         }
        &:hover{
-            transform: scale(1.05) translateY(-.5rem);
-            z-index:20;
+            /*transform: scale(1.05) translateY(-.5rem);*/
+            /*z-index:20;*/
             filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
             -webkit-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
             -moz-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
@@ -41,9 +41,9 @@
     }
 
     //composition:hover composition__logo:not(:hover)
-    &:hover &__logo:not(:hover){
+    /*&:hover &__logo:not(:hover){
         transform: scale(.95);
-    }
+    }*/
 
 }
 

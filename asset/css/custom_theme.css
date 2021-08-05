@@ -3,7 +3,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.page-title{
+.page-title {
   font-size: 27px;
   line-height: 48px;
   margin: 24px 0;
@@ -12,6 +12,7 @@ html{
 }
 
 /*menu*/
+/*see https://www.w3schools.com/howto/howto_css_fixed_menu.asp for sticky menu!!!*/
 
 #open-menu > ul { /*makes the list horizontal*/
   list-style-type: none;
@@ -30,10 +31,34 @@ html{
   font-family: "Archivo Black",sans-serif;
   text-align: center;
   padding: 0.5rem;
+  position: relative;
 }
 
 #open-menu > ul > li > a:hover {
   color: #C9C8C5;
+}
+
+#open-menu > ul > li > a::after { /*underline text in menu on hover*/
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #C9C8C5;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+#open-menu > ul > li > a:hover::after, #open-menu > ul > li > a:focus::after{
+  transform: scaleX(1);
+  visibility: visible;
 }
 
 /*add logic for menu visibility*/
@@ -314,6 +339,8 @@ footer{
   padding: 2px;
   margin: 3px;
   font-family: "Archivo Black",sans-serif;
+  margin-left: 0px;
+  border: #C9C8C5 solid 3px;
 }
 
 .highlight-section:hover{
