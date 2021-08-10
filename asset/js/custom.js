@@ -135,3 +135,27 @@ $(document).ready(function(){
     });
 });
 
+//hover on text makes hover on images (homepage)
+
+$(document).ready(function() {
+    $(".highlight-section.mina").mouseenter(function() {
+      $(".composition__logo--mina").addClass('highlight-on-hover'); 
+    })
+    $(".highlight-section.mina").mouseleave(function() {
+      $(".composition__logo--mina").removeClass('highlight-on-hover'); 
+    })
+
+    $(".highlight-section.figura").mouseenter(function() {
+      $(".composition__logo--figura").addClass('highlight-on-hover'); 
+    })
+    $(".highlight-section.figura").mouseleave(function() {
+      $(".composition__logo--figura").removeClass('highlight-on-hover'); 
+    })
+
+    $(".highlight-section.macchina").mouseenter(function() {
+        $(".composition__logo--macchina").addClass('highlight-on-hover'); 
+      })
+    $(".highlight-section.macchina").mouseleave(function() {
+          $(".composition__logo--macchina").removeClass('highlight-on-hover'); 
+    })
+});

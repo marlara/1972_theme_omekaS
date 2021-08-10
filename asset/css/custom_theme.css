@@ -14,6 +14,7 @@ html{
 /*menu*/
 /*see https://www.w3schools.com/howto/howto_css_fixed_menu.asp for sticky menu!!!*/
 
+
 #open-menu > ul { /*makes the list horizontal*/
   list-style-type: none;
   margin: 0;
@@ -59,6 +60,10 @@ html{
 #open-menu > ul > li > a:hover::after, #open-menu > ul > li > a:focus::after{
   transform: scaleX(1);
   visibility: visible;
+}
+
+#open-menu > ul > li.active > a {
+  color: #C9C8C5;
 }
 
 /*add logic for menu visibility*/
@@ -195,7 +200,7 @@ footer{
 /*first section*/
 .home_image_section{
     background-position: center center;
-    background-image: url(/omeka-s/themes/1972_thedaily/asset/img/home_sottsass.jpeg); /*omeka-s*/
+    background-image: url(/omeka-s/themes/1972_thedaily/asset/img/home_sottsass.jpeg); 
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -254,8 +259,14 @@ footer{
   height: 90%;
   background-color: white;
   border-top: 3px solid black;
-  border-bottom: 3px solid black;;
+  border-bottom: 3px solid black;
+  background-image: url(/omeka-s/themes/1972_thedaily/asset/img/logo_intero_transparent.png);
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: 25% 75%;
 }
+
+
 
 .arrow-down{
   display: block;
@@ -345,6 +356,14 @@ footer{
 
 .highlight-section:hover{
   background-color: #C9C8C5;
+}
+
+.childhover{
+  filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+  -webkit-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+  -moz-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+  -o-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+  -ms-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
 }
 
 

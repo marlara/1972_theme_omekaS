@@ -30,7 +30,7 @@
         }
        &:hover{
             /*transform: scale(1.05) translateY(-.5rem);*/
-            /*z-index:20;*/
+            z-index:20;
             filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
             -webkit-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
             -moz-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
@@ -47,4 +47,11 @@
 
 }
 
-
+.highlight-on-hover{
+    z-index:20;
+    filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+    -webkit-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+    -moz-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+    -o-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+    -ms-filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(348deg) saturate(152%); /* result: #DFC4A6*/
+  }
