@@ -159,3 +159,12 @@ $(document).ready(function() {
           $(".composition__logo--macchina").removeClass('highlight-on-hover'); 
     })
 });
+
+/**
+//menu on homepage positioned inside section. IT BREAKS THE SEARCH TOGGLE
+$(document).ready(function() {
+    if (location.pathname == "/omeka-s/s/1972_mostra/page/mostra") {
+        $("header").prependTo("#intro")
+    }
+});
+*/

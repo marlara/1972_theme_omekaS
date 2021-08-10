@@ -222,7 +222,7 @@ footer{
 }
 
 .intro_text{
-  height: 500px;
+  max-height: 500px;
   overflow-y: auto;
 }
 
@@ -283,11 +283,11 @@ footer{
 }
 
 .arrow-down img:hover, .arrow-down img:focus{
-  filter: invert(1);
-  -webkit-filter: invert(1);
-  -moz-filter: invert(1);
-  -o-filter: invert(1); 
-  -ms-filter: invert(1);
+  filter: invert(90%) sepia(5%) saturate(121%) hue-rotate(7deg) brightness(92%) contrast(84%);
+  -webkit-filter: invert(90%) sepia(5%) saturate(121%) hue-rotate(7deg) brightness(92%) contrast(84%);
+  -moz-filter: invert(90%) sepia(5%) saturate(121%) hue-rotate(7deg) brightness(92%) contrast(84%);
+  -o-filter: invert(90%) sepia(5%) saturate(121%) hue-rotate(7deg) brightness(92%) contrast(84%);
+  -ms-filter: invert(90%) sepia(5%) saturate(121%) hue-rotate(7deg) brightness(92%) contrast(84%);
 }
 
 /*third section*/
@@ -378,9 +378,9 @@ footer{
         font-size: 1em;
     }
 
-    #exhibit_intro .arrow-down{
+    /*#exhibit_intro .arrow-down{
       display: none;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 1000px) { /*change the logo into blocks*/
