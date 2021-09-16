@@ -168,3 +168,22 @@ $(document).ready(function() {
     }
 });
 */
+
+//dropdown menu
+
+$(document).ready(function() {
+    $("#open-menu > ul > li").each(function(){
+        var $menuVoice = $(this);
+        if ($menuVoice.find("ul")){
+            var $submenu = $menuVoice.children("ul");
+            $submenu.addClass('dropdown'); //add class to fix the graphics
+            $submenu.hide(); //if there is a submenu hide it
+            $(this).mouseover(function() { //show and hide on mouseover
+                $submenu.show();
+            });
+            $(this).mouseout(function() {
+                setTimeout("$submenu.hide();",50);
+            });
+        }
+    });
+});

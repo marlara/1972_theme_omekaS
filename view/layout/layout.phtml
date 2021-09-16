@@ -74,7 +74,7 @@ $this->trigger('view.layout');
             <div id="open-menu">
                 <?php
                 echo $site->publicNav()->menu()->renderMenu(null, [
-                    'maxDepth' => 0
+                    'maxDepth' => $this->themeSetting('nav_depth') - 1
                 ]);
                 ?>
             </div>

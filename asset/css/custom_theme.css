@@ -80,6 +80,30 @@ html{
   }
 }
 
+/*dropdown*/
+
+ul.dropdown { 
+  display: none; 
+  position: absolute; 
+  top: 100%;
+  margin-top: 0px; 
+  padding: 5px 5px; 
+  background: black; 
+}
+ul.dropdown li { 
+  list-style-type: none; 
+}
+ul.dropdown li a { 
+  text-decoration: none; 
+  padding: 0.2em 1em; 
+  display: block; 
+}
+
+ul.dropdown li a:hover{
+  color: #DFC7A9;
+}
+
+
 /*grey background for blocks*/
 
 .grey{
