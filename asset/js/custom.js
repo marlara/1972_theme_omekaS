@@ -172,6 +172,7 @@ $(document).ready(function() {
 //dropdown menu
 
 $(document).ready(function() {
+    var timer;
     $("#open-menu > ul > li").each(function(){
         var $menuVoice = $(this);
         if ($menuVoice.find("ul")){
@@ -182,8 +183,19 @@ $(document).ready(function() {
                 $submenu.show();
             });
             $(this).mouseout(function() {
-                setTimeout("$submenu.hide();",50);
+                timer = setTimeout(function() {$submenu.hide();} ,5000);
             });
+
+            $submenu.mouseover(function(){
+                clearTimeout(timer);
+            }, function(){
+                $submenu.show();
+            });
+
+            $submenu.mouseout(function(){
+                $submenu.hide();
+                clearTimeout(timer);
+            })
         }
     });
 });
