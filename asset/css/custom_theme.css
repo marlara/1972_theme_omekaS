@@ -28,7 +28,7 @@ html{
 
 #open-menu > ul > li > a{
   display: block;
-  color: #DFC7A9;
+  color: #fa648f;
   font-family: "Archivo Black",sans-serif;
   text-align: center;
   padding: 0.5rem;
@@ -84,6 +84,7 @@ html{
 
 ul.dropdown { 
   display: none; 
+  z-index: 20;
   position: absolute; 
   top: 100%;
   margin-top: 0px; 
@@ -100,7 +101,7 @@ ul.dropdown li a {
 }
 
 ul.dropdown li a:hover{
-  color: #DFC7A9;
+  color: #fa648f;
 }
 
 
@@ -116,7 +117,7 @@ ul.dropdown li a:hover{
 .rectangle_title{
   display: block;
   background: 
-  linear-gradient(to top left,transparent, #DFC7A9 0) top left/40% 40% no-repeat,
+  linear-gradient(to top left,transparent, #fa648f 0) top left/40% 40% no-repeat,
   transparent;
   margin-left: 0px;
 }
@@ -124,7 +125,7 @@ ul.dropdown li a:hover{
 @media only screen and (max-width: 1000px) {
   .rectangle_title{
     background: 
-    linear-gradient(to top left,transparent, #DFC7A9 0) top left/500px 40% no-repeat,
+    linear-gradient(to top left,transparent, #fa648f 0) top left/500px 40% no-repeat,
     transparent;
   }
 }
@@ -274,7 +275,7 @@ footer{
 
 #intro{
   display: block;
-  background-color: #DFC7A9;
+  background-color: #fa648f;
 }
 
 #intro .home_text{
@@ -355,7 +356,7 @@ footer{
 }
 
 .block_link{
-  background-color: #DFC7A9;
+  background-color: #fa648f;
   height: 20px;
   padding-left: 0px;
   border: black, solid, 1px;
@@ -369,7 +370,7 @@ footer{
 }
 
 .highlight-section{ /* highlight*/ 
-  background-color: #DFC7A9;
+  background-color: #fa648f;
   color: #000;
   padding: 2px;
   margin: 3px;
@@ -478,7 +479,7 @@ footer{
 .littlefoot-footnote__button {
     font-size: .5em;
     min-height: 24px;
-    background-color: #DFC7A9;
+    background-color: #fa648f;
     border-radius: 0px
 }
 .littlefoot-footnote__host > button > svg > circle {
@@ -515,7 +516,7 @@ footer{
 }
 
 .littlefoot-footnote__button:hover, .littlefoot-footnote__button:focus{
-  background-color: #DFC7A9;
+  background-color: #fa648f;
 }
 
 /* DESIGNER PAGE responsive image grid from https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
@@ -612,7 +613,7 @@ footer{
   width: 100%;
   height: auto;
   margin: 0;
-  background-color: #DFC7A9;
+  background-color: #fa648f;
   padding: 20px;
   border-bottom: 3px solid black;
 }
@@ -728,7 +729,7 @@ span.mono_link{
 }
 
 .select-image{
-  background-color: #DFC7A9;
+  background-color: #fa648f;
   padding: 0.6em;
   padding-left: 1.4em;
   padding-right: 1.4em;

@@ -7,6 +7,7 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/lightgallery.min.css')
 $this->headLink()->prependStylesheet($this->assetUrl('css/lightslider.min.css'));
 $lightMedia = [];
 $otherMedia = [];
+$itemType = $item-> value('dcterms:type');
 $sortedSubjects = [];
 $subjectValues = $item->subjectValues();
 $whitelist = ['image/bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/svg+xml', 'image/tiff'];
@@ -115,3 +116,6 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
       <?php endif; ?>
     });
 </script>
+<?php /* if ($itemType == 'IIIF'){
+    echo $this->universalViewer($item); 
+}*/?>
