@@ -728,6 +728,10 @@ span.mono_link{
   margin-top: 1em;
 }
 
+.column-slider{
+  float: left;
+}
+
 .select-image{
   background-color: #fa648f;
   padding: 0.6em;

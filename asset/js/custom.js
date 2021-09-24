@@ -107,6 +107,27 @@ $(document).ready(function(){
         $slider.find($('.imageslide')).each(function( i, el ){ //add a numbered id for each figure
             $(el).attr('id','image-num-'+i);
         });
+
+        //if there are more than 8 figures, make 2 columns of selection buttons
+        i = 0;
+        lenChild = $('.select-image').length;
+        if ( lenChild >= 8) {
+            var parentContainer = $('.pagination-slider');
+            v2 = (Math.floor(lenChild/8) * 8);
+            parentElem = 0;
+            jQuery(this).find('.select-image').each(function(){
+                if(i < v2) {
+                    if(i%8 == 0) {
+                        if(i != 0)
+                        jQuery(parentElem).appendTo(jQuery(parentContainer));
+                        parentElem = jQuery('<div class="column-slider"></div>');
+                    }
+                jQuery(this).appendTo(jQuery(parentElem));
+                i++;
+                }
+            });
+            jQuery(parentElem).appendTo(jQuery(parentContainer));
+        }
     });
 
     //select and change figure
