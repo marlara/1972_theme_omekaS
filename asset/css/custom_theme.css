@@ -7,7 +7,7 @@ html{
   font-size: 27px;
   line-height: 48px;
   margin: 24px 0;
-  font-family: "Archivo Black",sans-serif;
+  font-family: "Exo 2",sans-serif;
   font-weight: normal;
 }
 
@@ -29,7 +29,7 @@ html{
 #open-menu > ul > li > a{
   display: block;
   color: #fa648f;
-  font-family: "Archivo Black",sans-serif;
+  font-family: "Exo 2",sans-serif;
   text-align: center;
   padding: 0.5rem;
   position: relative;
@@ -374,7 +374,7 @@ footer{
   color: #000;
   padding: 2px;
   margin: 3px;
-  font-family: "Archivo Black",sans-serif;
+  font-family: "Exo 2",sans-serif;
   margin-left: 0px;
   border: #C9C8C5 solid 3px;
 }
