@@ -110,7 +110,7 @@ $(document).ready(function(){
 
         //if there are more than 8 figures, make 2 columns of selection buttons
         i = 0;
-        lenChild = $('.select-image').length;
+        lenChild = $slider.find($('.select-image')).length;
         if ( lenChild >= 8) {
             var parentContainer = $('.pagination-slider');
             v2 = (Math.floor(lenChild/8) * 8);
