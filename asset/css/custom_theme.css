@@ -278,10 +278,21 @@ footer{
   background-color: #fa648f;
 }
 
+#intro .title_home_text{
+  background-color: #fa648f;
+  height: 80px;
+  border-top: 3px solid black;
+}
+
+#intro .title_home_text h2{
+  margin: 0px;
+  padding: 12px 48px;
+}
+
 #intro .home_text{
   position: relative;
   overflow-y: scroll;
-  height: 95%;
+  height: calc(100% - 80px);
   background-color: white;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
