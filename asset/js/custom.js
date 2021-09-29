@@ -100,33 +100,34 @@ $(document).ready(function(){
         $slider_block.append('<div class="pagination-slider"></div>') //add the div for the pagination
 
         var titles_pagination = $slider.find($('.slider-title'));
-        titles_pagination.each(function(){
-            $slider.find($('.pagination-slider')).append('<div class="select-image" alt="go to image" role="tab" tabindex="0"><span>'+$(this).text()+"</span></div>") //gets the titles and relative urls to the slider items
+        titles_pagination.each(function(index){
+            $slider.find($('.pagination-slider')).append('<div class="select-image" alt="go to image" data-index="'+index+'" role="tab" tabindex="0"><span>'+$(this).text()+'</span></div>') //gets the titles and relative urls to the slider items
         });
         
         $slider.find($('.imageslide')).each(function( i, el ){ //add a numbered id for each figure
             $(el).attr('id','image-num-'+i);
         });
 
-        //if there are more than 8 figures, make 2 columns of selection buttons
+        //if there are more than 8 figures, make 2 columns of selection buttons. For more info see: https://api.jquery.com/jquery/#jQuery2
         i = 0;
         lenChild = $slider.find($('.select-image')).length;
         if ( lenChild >= 8) {
             var parentContainer = $('.pagination-slider');
             v2 = (Math.floor(lenChild/8) * 8);
             parentElem = 0;
-            jQuery(this).find('.select-image').each(function(){
+            $(this).find('.select-image').each(function(){
                 if(i < v2) {
                     if(i%8 == 0) {
                         if(i != 0)
-                        jQuery(parentElem).appendTo(jQuery(parentContainer));
-                        parentElem = jQuery('<div class="column-slider"></div>');
+                        $(parentElem).appendTo($(parentContainer));
+                        //parentElem = css("float", "left");
+                        parentElem = $('<div class="column-slider"></div>');
                     }
-                jQuery(this).appendTo(jQuery(parentElem));
+                $(this).appendTo($(parentElem));
                 i++;
                 }
             });
-            jQuery(parentElem).appendTo(jQuery(parentContainer));
+            $(parentElem).appendTo($(parentContainer));
         }
     });
 
@@ -142,7 +143,7 @@ $(document).ready(function(){
         $selectors.first().addClass('selected');
 
         $selectors.click(function() {
-            var index = $(this).index(); //the index of the selector
+            var index = $(this).data('index'); //the index of the selector
             var $nextSlide = $slides.eq(index);
             // don't do anything if same indexed slide already has current class
             if (!$nextSlide.hasClass('current')) {
