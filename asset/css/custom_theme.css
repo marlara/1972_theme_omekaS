@@ -879,9 +879,44 @@ blockquote p{
 }
 
 
-blockquote p::before {
+blockquote p::before{
   content: open-quote;
 }
-blockquote p::after {
+blockquote p::after{
   content: close-quote;
+}
+
+/* Item page */
+
+a.uri-value-link{
+  background-color: #fa648f;
+  margin: 0.3em;
+  position: relative;
+}
+
+a.uri-value-link::after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+a.uri-value-link:hover::after, a.uri-value-link:focus::after{
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+.universal-viewer{
+  margin-bottom: 30px;
 }
