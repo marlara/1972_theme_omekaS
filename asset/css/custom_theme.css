@@ -848,6 +848,39 @@ span.mono_link{
   padding: 10px;
 }
 
+.caption{
+  color: grey;
+}
+
+.caption a {
+  color: grey;
+  position: relative;
+  background-color: #F3DFA2;
+}
+
+.caption > a::after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3 ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.caption > a:hover::after, .mono_link > a:focus::after{
+  transform: scaleX(1);
+  visibility: visible;
+}
+
 @media screen and (max-width: 800px) {
   .mono_text_left, .mono_text_right{
     display: inline-block;
