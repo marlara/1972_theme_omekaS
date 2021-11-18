@@ -225,7 +225,7 @@ footer{
 /*first section*/
 .home_image_section{
     background-position: center center;
-    background-image: url(/omeka-s/themes/1972_thedaily/asset/img/home_sottsass.jpeg); 
+    background-image: url(/themes/1972_thedaily/asset/img/home_sottsass.jpeg); 
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -296,7 +296,7 @@ footer{
   background-color: white;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
-  background-image: url(/omeka-s/themes/1972_thedaily/asset/img/logo_intero_transparent.png);
+  background-image: url(/themes/1972_thedaily/asset/img/logo_intero_transparent.png);
   background-size: 100vh;
   background-repeat: no-repeat;
   background-position: 25% 75%;

@@ -112,11 +112,10 @@ $(document).ready(function(){
         i = 0;
         lenChild = $slider.find($('.select-image')).length;
         if ( lenChild >= 8) {
-            var parentContainer = $('.pagination-slider');
-            v2 = (Math.floor(lenChild/8) * 8);
+            var parentContainer = $slider.find($('.pagination-slider'));
             parentElem = 0;
             $(this).find('.select-image').each(function(){
-                if(i < v2) {
+                if(i < lenChild) {
                     if(i%8 == 0) {
                         if(i != 0)
                         $(parentElem).appendTo($(parentContainer));
