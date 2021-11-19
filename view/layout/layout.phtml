@@ -93,7 +93,9 @@ $this->trigger('view.layout');
         </header>
         <?php $content = $this->content;
             $dom = new DomDocument();
+            libxml_use_internal_errors(true);
             $dom->loadHtml($content);
+            libxml_clear_errors();
             $xpath = new DOMXPath($dom);
         ?>
         <?php $path = $_SERVER["REQUEST_URI"];
