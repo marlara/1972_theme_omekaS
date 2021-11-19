@@ -442,25 +442,14 @@ footer{
 
 /* DESIGN PAGE*/
 
-.wrap.design_page{ /*or else the wrap is broken*/
+.wrap.percorsi_page{ /*or else the wrap is broken*/
   height: auto;
   overflow-y: hidden;
 }
 
-.design_text{
-  flex: 50%;
-  float: left;
-  padding-top: 10%;
-}
-
-.cogapp{
-  margin-left: 5%;
-  float: left;
-  flex: 50%;
-}
-
-.cogapp:focus, .cogapp:focus-visible{
-  outline: 1px dotted;
+.percorsi_text{
+  flex: 100%;
+  padding-top: 10px;
 }
 
 .see_more{
@@ -469,13 +458,9 @@ footer{
 }
 
 @media screen and (max-width: 1000px) {
-  .wrap.design_page{
+  .wrap.percorsi_page{
     justify-content: flex-start;
     flex-direction: column;
-  }
-  
-  .cogapp{
-    margin: 5%;
   }
 }
 /* OTHERS */
