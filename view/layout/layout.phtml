@@ -25,6 +25,7 @@ $this->trigger('view.layout');
         <?php echo $this->headLink(); ?>
         <?php echo $this->headStyle(); ?>
         <?php echo $this->headScript(); ?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
             <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
@@ -146,6 +147,14 @@ $this->trigger('view.layout');
         <?php elseif ($path == "/s/1972_mostra/page/design"): #omeka-s #the design page has another layout but I don't like this solution ?> 
             <div id="content" role="main">
                 <img src="/themes/1972_thedaily/asset/img/logo_minaLITTLE.png" class="title_image"/><div class="rectangle_title"><h2>Design — MoMA 1972</h2></div>
+                <div class="social-button">
+                    <button class="social facebook" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </button>
+                    <button class="social twitter" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </button>
+                </div>
                     <section class="wrap percorsi_page">
                         <div class="percorsi_text">
                         <iframe width= "100%" height="600" src="https://storiiies.cogapp.com/viewer/662du/MoMA-1972?embed=true" title="Percorso Design — MoMA 1972"></iframe>
@@ -163,23 +172,39 @@ $this->trigger('view.layout');
         <?php elseif ($path == "/s/1972_mostra/page/moda"): #omeka-s #the moda page has another layout but I don't like this solution ?> 
             <div id="content" role="main">
                 <img src="/themes/1972_thedaily/asset/img/logo_figuraLITTLE.png" class="title_image"/><div class="rectangle_title"><h2>Moda — Milano 1971/1972</h2></div>
+                    <div class="social-button">
+                    <button class="social facebook" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </button>
+                    <button class="social twitter" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </button>
+                </div>
                 <section class="wrap percorsi_page">
                     <div class="percorsi_text">
                         <iframe width= "100%" height="600" src="https://exhibit.so/exhibits/kAaUsjel7VohRCIgqS6a?embedded=true" title="Percorso Moda — Milano 1971/1972"></iframe>
                         <form action="https://exhibit.so/exhibits/kAaUsjel7VohRCIgqS6a" target="_blank">
-                            <button type="submit" style="float:right; margin-right: 10%; margin:5%" value="Vai al percorso">Ingrandisci</button>
+                            <button type="submit" style="float:right; margin: 2%" value="Vai al percorso">Ingrandisci</button>
                         </form>
                     </div>
                 </section>
                 <section>
                 <div class="see_more">
-                    <?php echo $this->content; ?>    
+                    <?php echo $this->content; ?>
                 </div>
                 </section>
             </div>
         <?php elseif ($path == "/s/1972_mostra/page/storia"): #omeka-s #the moda page has another layout but I don't like this solution ?> 
             <div id="content" role="main">
                 <img src="/themes/1972_thedaily/asset/img/logo_macchinaLITTLE.png" style="margin-top:30px;" class="title_image"/><div class="rectangle_title"><h2>Storia</h2></div>
+                <div class="social-button">
+                    <button class="social facebook" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </button>
+                    <button class="social twitter" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </button>
+                </div>
                 <?php echo $this->content; ?>    
             </div>
         <?php elseif ($path == "/s/1972_mostra/page/designer"): #omeka-s #the designer page has another layout but I don't like this solution ?> 
@@ -293,7 +318,15 @@ $this->trigger('view.layout');
         <?php elseif (preg_match("/\/s\/1972_mostra\/page\/designer_.*/", $path)): #the designer page has another layout but I don't like this solution ?> 
             <div id="content_home" role="main">
                 <div class="head-mono">                    
-                    <span class="mono_link"></span>
+                    <div class="mono_link"></div>
+                </div>
+                <div class="social-button-designer">
+                    <button class="social facebook" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </button>
+                    <button class="social twitter" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </button>
                 </div>
                 <div class="scrolling-wrapper">
                     <span class='arrow-left'><img src="/themes/1972_thedaily/asset/img/chevron-left-solid.png"></span>

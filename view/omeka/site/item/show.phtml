@@ -29,6 +29,18 @@ if ($subjectValues) {
 <?php echo $this->pageTitle($item->displayTitle(), 2); ?>
 <h3><?php echo $this->translate('Item'); ?></h3>
 <?php $this->trigger('view.show.before'); ?>
+
+<button class="social facebook" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Facebook">
+    <i class="fa fa-facebook"></i>
+</button>
+<button class="social twitter" data-url="<?php echo $this->serverUrl(true); ?>" title="Share on Twitter">
+    <i class="fa fa-twitter"></i>
+</button>
+
+<button class="social embed" data-url="<?php echo $escape($media->thumbnailUrl('medium')); ?>" data-title="<?php echo $this->escapeHtml($item->displayTitle()); ?>" title="Get embed code">
+    <i class="fa fa-code"></i>
+</button>
+
 <?php if (strpos($mediaRenderer, 'iiif') !== false  ): {
     }?>
 <?php elseif ($item->media()): ?>

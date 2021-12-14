@@ -220,3 +220,24 @@ $(document).ready(function() {
         }
     });
 });
+
+
+//sharing
+
+$(document).on('click','.social',function(e){
+    if($(this).hasClass('facebook')){
+        const url  = 'http://www.facebook.com/sharer.php?u='+$(this).data("url");
+        window.open(url,'',"width=500,height=500,left=400px,top=100px,location=no");
+    }
+    else if($(this).hasClass('twitter')){
+        const url  = 'https://twitter.com/intent/tweet?url='+$(this).data("url");
+        window.open(url,'',"width=500,height=500,left=400px,top=100px,location=no");
+    }
+    else if ($(this).hasClass('embed')){
+        e.preventDefault();
+        embedUrl = $(this).data('url');
+        embedTitle = $(this).data('title');
+        embedCode = "<iframe src='" + embedUrl + "' title='"+ embedTitle +"'></iframe>";
+        alert(embedCode);
+    }
+});

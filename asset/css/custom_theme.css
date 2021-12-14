@@ -530,7 +530,7 @@ footer{
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .column-grid {
     flex: 50%;
     max-width: 50%;
@@ -538,7 +538,7 @@ footer{
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .column-grid {
     flex: 100%;
     max-width: 100%;
@@ -614,6 +614,18 @@ footer{
   border-bottom: 3px solid black;
 }
 
+@media screen and (max-width: 1000px) {
+  .head-mono{
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .head-mono{
+    padding: 5px;
+  }
+}
+
 .scrolling-wrapper{
   display: flex;
   flex-wrap: nowrap;
@@ -628,6 +640,10 @@ footer{
 
 .section_mono > p, .section_mono > h2{ /* margin of the text inside each section*/
   margin: 1.5em;
+}
+
+.section_mono > h2{
+  margin-top: 0;
 }
 
 /* left and right arrow pagine monografie */
@@ -661,7 +677,7 @@ span.arrow-right{
   float: right;
 }
 
-span.mono_link{
+.mono_link{
   padding-left: 40px;
   position: relative;
 }
@@ -769,7 +785,7 @@ span.mono_link{
 }
 
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .slider-block{
     width: 100vw;
     margin-right: auto;
@@ -866,7 +882,7 @@ span.mono_link{
   visibility: visible;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .mono_text_left, .mono_text_right{
     display: inline-block;
   }
@@ -937,4 +953,42 @@ a.uri-value-link:hover::after, a.uri-value-link:focus::after{
 
 .universal-viewer{
   margin-bottom: 30px;
+}
+
+
+/* sharing */
+
+.facebook{
+  background-color: #1877F2;
+}
+
+.twitter{
+  background-color: #55ACEE;
+}
+
+.embed{
+  background-color: whitesmoke;
+}
+
+.social-button{
+  float: right;
+}
+
+.social-button-designer{
+  margin: 5px;
+  max-width: 100%;
+  min-width: 100px;
+  margin-left: 90vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .social-button-designer{
+    margin-left: 85vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social-button-designer{
+    margin-left: 70vw;
+  }
 }
