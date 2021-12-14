@@ -992,3 +992,8 @@ a.uri-value-link:hover::after, a.uri-value-link:focus::after{
     margin-left: 70vw;
   }
 }
+
+/* fix the browse menu */
+.browse h1{
+  width: auto;
+}
