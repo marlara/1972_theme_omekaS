@@ -942,10 +942,16 @@ blockquote p::after{
     display: none;
   }
 
+  .head-mono{
+    position:sticky;
+    top: 0px;
+    z-index: 20;
+  }
+
   span.arrow-top-left img, span.arrow-top-right img{
     height: 24px;
   }
-  
+
   span.arrow-top-left,   span.arrow-top-right{
     cursor: pointer;
   }
