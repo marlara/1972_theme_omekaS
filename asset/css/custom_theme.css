@@ -777,13 +777,14 @@ span.arrow-right{
 }
 
 .select-image.selected{
-  border: 3px solid black;
+  box-shadow: 0px 0px 0px 3px black inset; /* borders inside div, not outside */
 }
 
 .select-image.selected:hover::after, .select-image.selected:focus::after{ 
   visibility: hidden;
 }
 
+/*responsive monografie */
 
 @media only screen and (max-width: 800px) {
   .slider-block{
@@ -918,6 +919,56 @@ blockquote p::before{
 }
 blockquote p::after{
   content: close-quote;
+}
+
+/* immagine monografie */
+
+.section_mono img{
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+/*responsive monografie */
+
+@media only screen and (max-width: 800px) {
+  span.arrow-left, span.arrow-right{
+    display: none;
+  }
+
+  .section_mono img{
+    width: auto;
+    max-height: 80vw;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .section_mono > h2{
+    margin-bottom: 0.2em;
+  }
+
+  .mono_text{
+    padding: 0.5em;
+  }
+
+  .caption{
+    text-align: center;
+  }
+
+  .pagination-slider{
+    margin-left: 1.5em;
+  }
+  
+  .select-image{
+    margin: 0.1em;
+  }
+
+  .column-slider{
+    float: none;
+  }
+
 }
 
 /* Item page */

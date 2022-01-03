@@ -82,7 +82,7 @@ $(document).ready(function() {
         $(this).click(function(){
             var id = $(this).attr('href');
             
-            scrollContainer.animate({"scrollLeft": $(id).position().left + scrollContainer.scrollLeft()}, 400);
+            scrollContainer.animate({"scrollLeft": $(id).position().left -20 + scrollContainer.scrollLeft()}, 400);
         });
     });
 });
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 
-    //create elements
+    //create column slider iff the viewport is greater than 800px
     $('.slider').each(function(){
         $slider = $(this);
         var $slider_block = $slider.find($('.slider-block'));
