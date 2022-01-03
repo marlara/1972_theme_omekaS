@@ -64,6 +64,8 @@ var scrollSection = $(document).ready(function() {
   //bind events
   $(".arrow-left").click({direction: "prev"}, moveToItem);
   $(".arrow-right").click({direction: "next"}, moveToItem);
+  $(".arrow-top-left").click({direction: "prev"}, moveToItem);
+  $(".arrow-top-right").click({direction: "next"}, moveToItem);
 
 });
 
@@ -86,7 +88,6 @@ $(document).ready(function() {
         });
     });
 });
-
 
 
 //slider

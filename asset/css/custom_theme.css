@@ -931,8 +931,26 @@ blockquote p::after{
 
 /*responsive monografie */
 
+@media only screen and (min-width: 801px) {
+  .arrows_top{
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   span.arrow-left, span.arrow-right{
+    display: none;
+  }
+
+  span.arrow-top-left img, span.arrow-top-right img{
+    height: 24px;
+  }
+  
+  span.arrow-top-left,   span.arrow-top-right{
+    cursor: pointer;
+  }
+
+  .mono_link{
     display: none;
   }
 
