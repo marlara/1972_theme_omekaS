@@ -1,0 +1,52 @@
+/* TimelineJS */
+
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline, .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p{
+	color: black;
+}
+
+.tl-timemarker .tl-timemarker-content-container{
+	color: #F3DFA2;
+}
+
+.tl-timenav{
+	color: black;
+}
+
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class^="tl-icon-"], .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class*=" tl-icon-"]{
+	color: black;
+}
+
+.tl-text .tl-headline-date, .tl-text h3.tl-headline-date{
+	color: #FA648F;
+}
+
+.tl-credit{
+	color:black;
+}
+
+.tl-caption{
+	text-align: right;
+	color: black;
+	font-weight: bold;
+}
+
+.tl-text{
+	color: black;
+}
+
+.tl-timeline h1, .tl-timeline h2, .tl-timeline h3, .tl-timeline h4, .tl-timeline h5, .tl-timeline h6{
+	color: #F3DFA2;
+}
+
+.tl-timeline a{
+	background-color: #FA648F; /* e poi tutte le cose per i link */
+}
+
+.tl-attribution > a{
+	background-color: transparent;
+}
+
+.tl-timeline .tl-note{
+	border: 2px solid black;
+	border-radius: unset;
+}
