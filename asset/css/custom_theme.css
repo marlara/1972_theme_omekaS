@@ -1072,3 +1072,21 @@ a.uri-value-link:hover::after, a.uri-value-link:focus::after{
 .browse h1{
   width: auto;
 }
+
+/*Cookie bar*/
+#cookie-bar .cb-enable{
+  background: #fa648f;
+}
+
+#cookie-bar .cb-enable:hover{
+  background: #F3DFA2;
+}
+
+#cookie-bar a{
+  color: black;
+  border-radius: none;
+}
+
+#cookie-bar p{
+  display: inline;
+}
