@@ -1075,16 +1075,16 @@ a.uri-value-link:hover::after, a.uri-value-link:focus::after{
 
 /*Cookie bar*/
 #cookie-bar .cb-enable{
-  background: #fa648f;
+  background: #fa648f !important;
 }
 
 #cookie-bar .cb-enable:hover{
-  background: #F3DFA2;
+  background: #F3DFA2 !important;
 }
 
 #cookie-bar a{
-  color: black;
-  border-radius: none;
+  color: black !important;
+  border-radius: 0px !important;
 }
 
 #cookie-bar p{
