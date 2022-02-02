@@ -106,10 +106,11 @@ $this->trigger('view.layout');
                     <div class="overlay">
                         <div id="exhibit_intro">
                             <div class="intro_text">
-                            <?php $result = $xpath->query("//div[@class='text_1']");
-                                $node = $result->item(0);
-                                echo $dom->saveHTML($node);
-                            ?>
+                                <h1 class="cover_title">1972. Moda, design, storia</h1>
+                                <?php $result = $xpath->query("//div[@class='text_1']");
+                                    $node = $result->item(0);
+                                    echo $dom->saveHTML($node);
+                                ?>
                             </div>
                             <a class="arrow-down" href="#intro"><img src="/themes/1972_thedaily/asset/img/chevron-down-solid.png"></a>
                         </div>

@@ -247,12 +247,22 @@ footer{
 }
 
 .intro_text{
-  max-height: 500px;
+  max-height: 80%;
   overflow-y: auto;
+  margin-top: 5rem;
 }
 
 .intro_text p{
   color: #fff;
+}
+
+.cover_title{
+  color: #fa648f;
+  font-family: "Space Grotesk",sans-serif;
+  font-size: 4rem;
+  margin-top: 2px;
+  padding: 10px;
+  line-height: 0.8;
 }
 
 #exhibit_intro .arrow-down img{
