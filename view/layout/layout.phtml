@@ -120,12 +120,15 @@ $this->trigger('view.layout');
                     <div class="title_home_text">
                         <h2>La mostra</h2>
                     </div>
-                    <div class="home_text">
-                        <?php $result = $xpath->query("//div[@class='text_2']");
-                            $node = $result->item(0);
-                            echo $dom->saveHTML($node);
-                        ?>
-                        <a class='arrow-down' href="#logo"><img src="/themes/1972_thedaily/asset/img/chevron-down-solid.png"></a>
+                    <div class="wrap_intro">
+                        <img class="versace_image" src="/themes/1972_thedaily/asset/img/versace_logo_ritagliato_bianco.png">
+                        <div class="exhibit_descr">
+                            <?php $result = $xpath->query("//div[@class='text_2']");
+                                $node = $result->item(0);
+                                echo $dom->saveHTML($node);
+                            ?>
+                            <a class='arrow-down' href="#logo"><img src="/themes/1972_thedaily/asset/img/chevron-down-solid.png"></a>
+                        </div>
                     </div>
                 </section>
                 <section class="home_section home_section--logo" id="logo">
