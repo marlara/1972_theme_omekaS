@@ -442,6 +442,10 @@ footer{
   border: #F3DFA2 solid 3px;
 }
 
+.highlight-section::after{
+  content: none;
+}
+
 .highlight-section:hover{
   background-color: #F3DFA2;
 }
