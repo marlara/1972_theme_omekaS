@@ -71,6 +71,14 @@ html{
   color: #F3DFA2;
 }
 
+.link_footer {
+  color: #fa648f;
+}
+
+.link_footer:hover {
+  color: #F3DFA2;
+}
+
 /*add logic for menu visibility*/
 
 @media only screen and (max-width: 1000px){
